@@ -1,5 +1,5 @@
 ---
-layout: dq
+layout: post
 author: Eric G and Jeremy W
 title: 美国大片 America Big Movie
 date: 2015-11-04
