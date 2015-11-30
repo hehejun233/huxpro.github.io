@@ -1,6 +1,6 @@
 ---
 layout: dq
-author: test
+author: Eric G and Jeremy W
 title: 美国大片 America Big Movie
 date: 2015-11-04
 categories: blog
