@@ -196,28 +196,3 @@ PS:本人使用OS X， Windows操作应该与本教程相差无几。
 
 当你的仓库发布了之后，你可以通过<code>http://username.github.io/</code>访问。可是如果你想要一个个性化的域名呢？
 这里以[<code>Dot TK</code>](http://dot.tk/)为例。首先登陆dottk，然后填一个你喜欢的域名。接下来进入DNS设置，填写你在终端<code>ping</code>的ip地址，现在是<code>103.245.222.133</code>，总之是一串带点的数字就好了。接下来返回你的仓库，在根目录处创建一个<code>CNAME</code>文件。里面填上你的域名，不要带<code>http://</code>和结尾的<code>/</code>。别的收费注册域名商操作方法也是类似的，找到解析就好。推荐使用<code>DNSPOD</code>
-
-<form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
-    <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
-    <a href="https://www.baidu.com/" target="_blank">
-        <img src="https://www.baidu.com/img/baidu_jgylogo3.gif" alt="Baidu" align="bottom" border="0">
-    </a>
-    <input type="text"  onfocus="checkHttps" name="word"  size="30">
-    <input type="submit"value="百度搜索">
-</form>
-<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
-<script>
-    function checkHttps () {
-        BaiduHttps.useHttps();    
-    };
-    function baiduWithHttps (formname) {
-        var data = BaiduHttps.useHttps();
-        if (data.s === 0) {
-            return true;
-        }
-        else {
-            formname.action = 'https://www.baidu.com/baidu' + '?ssl_s=1&ssl_c' + data.ssl_code;
-            return true;
-        }
-    };
-</script>
