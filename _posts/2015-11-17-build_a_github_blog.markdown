@@ -197,44 +197,27 @@ PS:本人使用OS X， Windows操作应该与本教程相差无几。
 当你的仓库发布了之后，你可以通过<code>http://username.github.io/</code>访问。可是如果你想要一个个性化的域名呢？
 这里以[<code>Dot TK</code>](http://dot.tk/)为例。首先登陆dottk，然后填一个你喜欢的域名。接下来进入DNS设置，填写你在终端<code>ping</code>的ip地址，现在是<code>103.245.222.133</code>，总之是一串带点的数字就好了。接下来返回你的仓库，在根目录处创建一个<code>CNAME</code>文件。里面填上你的域名，不要带<code>http://</code>和结尾的<code>/</code>。别的收费注册域名商操作方法也是类似的，找到解析就好。推荐使用<code>DNSPOD</code>
 
-<!-- Web Union Google -->
-<form name="gform" method="get" action="http://www.google.cn/search" target="_top">
-<div align="center">
-<table border="0" bgcolor="#ffffff" width="532">
- <tr>
-   <td nowrap="nowrap" valign="top" align="left" height="32">
-     <a href="http://www.google.cn/webhp?client=aff-sowang&hl=zh-CN&channel=searchlink">
-       <img src="http://www.google.cn/logos/Logo_25wht.gif" border="0" alt="Google 中文" align="right" width="75" height="32"> </a>
-    </td>
-   <td nowrap="nowrap">
-    <input type="text" name="q" size="32" maxlength="255" value="" style="font-size: 10pt"></input>     
- <input type="submit" name="sa" value="Google 搜索" style="font-size: 10pt"></input>
-   </td>
-  </tr>
-  <tr>
-   <td> </td>
-   <td nowrap="nowrap">
-    <table><tr>
-     <td colspan=3 align=center><font size=-1>
-      <input id=all type=radio name=lr value="" checked/>
-      <label for=all>搜索所有网页</label>
-      <input id=ch type=radio name=lr value=lang_zh-CN|lang_zh-TW/>
-      <label for=ch>中文网页</label>
-      <input id=il type=radio name=lr value=lang_zh-CN/>
-      <label for=il>简体中文网页</label></font>
-     </td>
-     </tr>
-    </table>
-   <input type="hidden" name="client" value="aff-sowang"></input>
-   <input type="hidden" name="ie" value="UTF-8"></input>
-   <input type="hidden" name="oe" value="UTF-8"></input>
-   <input type="hidden" name="hl" value="zh-CN"></input>
-   <input type="hidden" name="channel" value="search"></input>
-  </td>
-  </tr>
-  <tr>
-    <td colspan=3 align=left> </td>
-  </tr>
-</table>
-</div>
-</form> <!-- Web Union Google -->
+<form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+    <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+    <a href="https://www.baidu.com/" target="_blank">
+        <img src="https://www.baidu.com/img/baidu_jgylogo3.gif" alt="Baidu" align="bottom" border="0">
+    </a>
+    <input type="text"  onfocus="checkHttps" name="word"  size="30">
+    <input type="submit"value="百度搜索">
+</form>
+<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
+<script>
+    function checkHttps () {
+        BaiduHttps.useHttps();    
+    };
+    function baiduWithHttps (formname) {
+        var data = BaiduHttps.useHttps();
+        if (data.s === 0) {
+            return true;
+        }
+        else {
+            formname.action = 'https://www.baidu.com/baidu' + '?ssl_s=1&ssl_c' + data.ssl_code;
+            return true;
+        }
+    };
+</script>
