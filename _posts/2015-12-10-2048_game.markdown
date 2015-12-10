@@ -11,8 +11,9 @@ description:
 # 2048
 
 昨天我用html写了一个[2048](http://computereric.xyz/2048_game/)的小游戏，如果感兴趣的话可以玩玩。
+![](http://computereric.xyz/cache/img/2048.png)
 
 ## 但这，并不重要
 
 如果你玩到<code>**20000</code>分以上，你可以获得15元的奖励，请在评论里写出分数截图和支付方式！
-![](http://computereric.xyz/cache/img/2048_2626.png)
+![](http://computereric.xyz/cache/img/2048_2828.png)
